@@ -22,4 +22,4 @@ post {
     success { echo '✅ Demo deployed successfully' }
     failure { echo '❌ Deployment failed' }
 }
-}
+
