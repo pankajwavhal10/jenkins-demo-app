@@ -1,18 +1,11 @@
-
 pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/pankajwavhal10/jenkins-demo-app.git',
-                    credentialsId: 'Github-Cred'
-            }
-        }
-
         stage('Build') {
             steps {
-                echo 'Nothing to build - Static HTML application'
+                echo 'Starting static HTML application build...'
+                echo 'Nothing to compile - Static HTML application'
             }
         }
 
@@ -28,11 +21,11 @@ pipeline {
 
     post {
         success {
-            echo 'Demo deployed successfully!'
+            echo 'Demo application pipeline completed successfully!'
         }
 
         failure {
-            echo 'Deployment failed!'
+            echo 'Pipeline execution failed!'
         }
 
         always {
